@@ -4,7 +4,7 @@ accelPoco = \markup { \italic {poco a poco accel.}}
 
 upper = \relative c' {
   \clef treble
-  \key aes \major
+  \key f \minor
   \time 2/4
   \tempo 4 = 60
   
@@ -17,7 +17,7 @@ upper = \relative c' {
   ees des ees4 
   % aes8 f4 ees16 des 
   aes8 f8. ees16 des c
-  s2  r2 \accelPoco
+  s2  r2_\accelPoco
   
   
   r8 c4 des8~  
@@ -58,6 +58,7 @@ upper = \relative c' {
   ees2
   \omit TupletNumber
   s4 s8 \tuplet 3/2 { s16 des8 } 
+  \undo \omit TupletNumber
   
   % bes minor
   ees4 des8 \tuplet 3/2 { c16 des ees}
@@ -87,6 +88,7 @@ upper = \relative c' {
   aes4( bes)
   \omit TupletNumber
   s4 s8 \tuplet 3/2 { s16 bes8 } 
+  \undo\omit TupletNumber
   
   % f minor
   bes4 aes
@@ -132,7 +134,46 @@ upper = \relative c' {
   s4 s8 aes8
   
   
-   %% RETURN TO ORIGINAL THEME %%
+  %% RETURN TO ORIGINAL THEME %%
+  % bes minor
+  aes4 g8 aes
+  aes4 g8 aes
+  
+  % aes minor
+  aes2
+  s4 s8 \tuplet 3/2 { aes16 g aes }
+  
+  % bes minor
+  aes4 g8 aes
+  aes4 g8 c
+  
+  % aes minor
+  aes2
+  s4 s8 \tuplet 3/2 { bes16 aes bes }
+  
+  % f minor
+  c4 bes8 des8
+  
+  % c minor
+  c4 bes8 des
+  
+  % aes minor
+  c4 des8 aes
+  
+  % f minor
+  aes4. \tuplet 3/2 { bes16 aes bes }
+  
+  
+  %% CONCLUSION %%
+  c4 bes8 ees
+  c4 bes8 aes
+  aes4. g16 aes
+  aes4. g16 aes
+  aes4. g16 aes
+  aes4. g16 aes
+  aes2
+  <aes c>2
+  
   
   
   
@@ -142,7 +183,7 @@ upper = \relative c' {
 
 lower = \relative c' {
   \clef bass
-  \key aes \major
+  \key f \minor
   \time 2/4
 
   \repeat volta 2 {
@@ -156,7 +197,8 @@ lower = \relative c' {
     <f aes> <g bes>  bes16 aes g8 f4
   }
   
-  f4 f  f f  f f  
+  f4 f 
+  f f  f f  
   \tuplet 3/2 {bes,8 des f} bes4  
   \tuplet 3/2 {bes,8 des f} bes4  
   \tuplet 3/2 {aes,8 c ees} \tuplet 3/2 {aes4 aes8}  
@@ -265,6 +307,46 @@ lower = \relative c' {
   
   
   %% RETURN TO ORIGINAL THEME %%
+  % bes minor
+  bes16 des aes' g bes aes c8
+  bes,16 des aes' g bes aes bes8
+  
+  % aes minor
+  aes,16 ees' aes g bes aes g8
+  aes16 g f ees ees4
+  
+  % bes minor
+  bes16 des aes' g bes aes c8
+  bes,16 des aes' g bes aes g8
+  
+  % aes minor
+  aes,16 ees' aes c ees aes ees c ~
+  c8 ees16 c aes g \tuplet 3/2 { c16 bes aes }
+  
+  % f minor
+  f16 bes des f <bes, f'>8 <aes f'>8
+  
+  % c minor
+  g16 bes des f <des bes'>8 <bes bes'>
+  
+  % aes minor
+  aes16 c ees g <g ees>8 <c, ees>
+  
+  % f minor
+  <f f,>16 ees c aes f4
+  
+  %% CONCLUSION %%
+  % f minor
+  f16 bes des f <des f>8 <des g>
+  f,16 bes c ees f4
+  f,16 c' ees f~ f4
+  ees,16 c' ees f~ f4
+  des,16 c' ees f~ f4
+  bes,,16 g' aes bes~ bes4
+  aes,16 ees' aes g bes aes c bes 
+  s2
+  
+  \bar "|."
   
   
   

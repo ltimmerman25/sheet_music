@@ -1,5 +1,7 @@
 \version "2.22.1"
 
+accelPoco = \markup { \italic {poco a poco accel.}}
+
 upper = \relative c' {
   \clef treble
   \key aes \major
@@ -15,8 +17,8 @@ upper = \relative c' {
   ees des ees4 |
   % aes8 f4 ees16 des| 
   aes8 f4 \tuplet 3/2 {ees16 des c}
-  r2 | r2|
-
+  r2 | r2_\accelPoco|
+  
   
   r8 c4 des8~ | 
   des8 ees4 aes8| 
@@ -47,6 +49,38 @@ upper = \relative c' {
   \tuplet 3/2 {ees8 g ees} \tuplet 3/2 {c4 ees8}
   
   
+  %% BEGIN BRIDGE SECTION %%
+  % bes minor
+  ees4 des8 \tuplet 3/2 { ees16 des c } 
+  ees4 des8 \tuplet 3/2 { ees16 des ees } 
+  
+  % aes major
+  ees2
+  r4.. des16
+  
+  % bes minor
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  
+  % aes major
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  
+  % c minor
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  
+  % f minor
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  ees4 des8 \tuplet 3/2 { c16 des ees}
+  
+  % bes minor
+  g4 f8 \tuplet 3/2 { ees16 f g}
+  g4 f8 \tuplet 3/2 { ees16 f g}
+  
+  
+  
+  
 }
 
 lower = \relative c' {
@@ -72,13 +106,13 @@ lower = \relative c' {
   \tuplet 3/2 {ees8 c aes} \tuplet 3/2 {c ees aes~} |
   
   aes4 r4 | 
-  \tuplet 3/2 {bes,8 des f} | 
-  bes4   \tuplet 3/2 {bes,8 des f} 
-  bes4 \tuplet 3/2 {aes,8 c ees} 
-  \tuplet 3/2 {aes c ees}  \tuplet 3/2 {aes ees aes} |
-  \tuplet 3/2 {ees c aes} ees4
+  \tuplet 3/2 {bes,8 des f} bes4   |
+  \tuplet 3/2 {bes,8 des f} bes4 |
+  \tuplet 3/2 {aes,8 c ees}  \tuplet 3/2 {aes c ees}  |
+  \tuplet 3/2 {aes ees aes}  \tuplet 3/2 {ees c aes} |
   
-  \tuplet 3/2 {c'8 bes aes} | 
+  
+  ees4 \tuplet 3/2 {c'8 bes aes} | 
   \tuplet 3/2 {f8 bes des} f4 |
   \tuplet 3/2 {g,8 bes des} f4 | 
   \tuplet 3/2 {aes,8 c ees} g4 |
@@ -90,6 +124,26 @@ lower = \relative c' {
   f4 \tuplet 3/2 {aes,8 c ees} | 
   g4 r4 | 
   r2|  
+  
+  
+  %% BEGIN BRIDGE SECTION %%
+  % bes minor
+  \tuplet 3/2 { bes,,8 des des' } c8 \tuplet 3/2 {f,16 aes8}
+  \tuplet 3/2 { bes,8 des des' } c8 \tuplet 3/2 {f,16 aes8}
+  
+  % aes major
+  \tuplet 3/2 { aes,8 ees' c' } bes8 \tuplet 3/2 {aes16 g8}
+  \tuplet 3/2 { aes,8 ees' c' } bes8 \tuplet 3/2 {aes16 g8}
+  
+  % bes minor
+  \tuplet 3/2 { bes,8 des des' } c8 \tuplet 3/2 {f,16 aes8}
+  \tuplet 3/2 { bes,8 des des' } c8 \tuplet 3/2 {f,16 aes8}
+  
+  % aes major
+  \tuplet 3/2 { aes,8 ees' c' } bes8 \tuplet 3/2 {aes16 g8}
+  \tuplet 3/2 { aes,8 ees' c' } bes8 \tuplet 3/2 {aes16 g8}
+  
+  
 }
 
 
